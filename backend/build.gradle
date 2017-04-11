@@ -73,3 +73,5 @@ task buildDocker(type: Docker) {
 }
 
 buildDocker.dependsOn(build)
+
+task stage(dependsOn: ['build', 'assemble'])
